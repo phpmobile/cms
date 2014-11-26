@@ -1,0 +1,18 @@
+.print a {
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 13px;
+    height: 17px;
+    line-height: 20px;
+    margin-right: 2px;
+    padding-left: 23px;
+}
+.print_opt {
+    background-image: url("../images/print_opt_ico.png");
+}
+.view_table .print {
+    float: right;
+}

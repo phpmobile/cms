@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/admin.css"/>
+<script type="text/javascript" src="../jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./jquery.artDialog.js?skin=168"></script>
+<script type="text/javascript">
+function function_name()
+{
+	d.tip(true);
+	alert("回调函数被执行了");
+}
+$(function(){
+	$("table a").each(function(){
+		if($(this).html()==""){
+			$(this).html($(this).attr("onclick"));
+		}
+	});
+	d.box("aaa",'dbox',function_name,"sss");
+	
+});
+</script>
+<style type="text/css">
+.admin_table1 thead tr th { color:#000;}
+</style>
+</head>
+
+<body>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">d.tip()提示</th><th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>一个参数：d.tip(icon)<br/>icon:true|false|suc|err</td>
+            <td>
+                <a onclick="d.tip('suc')"></a>或<a onclick="d.tip(true)"></a>
+                <a onclick="d.tip('err')"></a>或<a onclick="d.tip(false)"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>二个参数(自定义提示内容)：d.tip(icon,content)<br/>icon:true|false|suc|err|other<br/>content:自定义内容</td>
+            <td>
+                <a onclick="d.tip('suc','自定义成功提示内容')"></a>或<a onclick="d.tip(true,'自定义成功提示内容')"></a><br/>
+                <a onclick="d.tip('err','自定义失败提示内容')"></a>或<a onclick="d.tip(false,'自定义失败提示内容')"></a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>二个参数(回调函数)：d.tip(icon,fun)<br/>icon:true|false|suc|err|other<br/>fun:回调函数名</td>
+            <td>
+                <a onclick="d.tip('suc',function_name)"></a>
+                <a onclick="d.tip(false,function_name)"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>三个参数(自定义提示内容 & 回调函数)：d.tip(icon,fun)<br/>icon:true|false|suc|err|other<br/>fun:回调函数名</td>
+            <td>
+                <a onclick="d.tip('suc','自定义成功提示内容',function_name)"></a>
+                <a onclick="d.tip(false,'自定义失败提示内容',function_name)"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>预定义一些常用的提示</td>            
+            <td>            	
+                可以预定义一些常用的提示！需要定义是联系我<br/>
+                删除成功：<a onclick="d.tip('del')"></a>
+            </td>
+        </tr>        
+    </tbody>
+</table>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">d.doing()锁定执行</th>
+            <th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>默认无参：d.doing()</td>
+            <td>
+                <a onclick="javascript:var doing=d.doing();setTimeout(function(){doing.close();},2000);">
+                	执行：var doing=d.doing();关闭：doing.close()
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>自定义提示内容：d.doing(content)<br/>content:提示内容</td>
+            <td>
+                <a onclick="javascript:var doing=d.doing('正在请求数据..');setTimeout(function(){doing.close();},2000);">
+                	执行：var doing=d.doing('正在请求数据..');关闭：doing.close()
+                </a>
+            </td>
+        </tr>      
+    </tbody>
+</table>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">d.confirm()确认对话框</th>
+            <th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>默认一个参数:d.confirm(function_name)<br/>function_name:确定后执行函数的名字，不加引号<br/></td>
+            <td>
+                <a onclick="d.confirm(function_name)"></a>         	
+            </td>
+        </tr>  
+        <tr>
+            <td>预定义一些提示:d.confirm(function_name,content_name)<br/>function_name:确定后执行函数的名字，不加引号<br/>content_name:ok|del，你可以预先定义一些提示名称</td>
+            <td>
+                <a onclick="d.confirm(function_name,'del')"></a>         	
+            </td>
+        </tr>   
+        <tr>
+            <td>自定义提示:d.confirm(function_name，content)<br/>function_name:确定后执行函数的名字，不加引号<br/>content:提示内容</td>
+            <td>
+                <a onclick="d.confirm(function_name,'你确定取消申请！')"></a>         	
+            </td>
+        </tr>        
+    </tbody>
+</table>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">d.open()弹出本页盒子</th>
+            <th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>d.box(title,id,function_name)<br/>title：弹出框标题<br/>id:要打开盒子的ID<br/>function_name：回调函数名，不要引号,无需要回调函数时传false，里面的按钮自动隐藏</td>
+            <td>
+                <a onclick="d.box('标题','dbox',false)"></a>
+                <a onclick="d.box('标题','dbox',function_name)"></a>
+                
+            </td>
+        </tr>      
+    </tbody>
+</table>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">弹出外部文件：d.url()</th>
+            <th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>d.url(title,url)<br/>title：弹出框标题<br/>url:打开的文件<br/></td>
+            <td>
+                <a onclick="d.url('标题','./demo_url.html')"></a>           
+            </td>
+        </tr>      
+    </tbody>
+</table>
+<table class="admin_table1">
+    <thead>
+    	<tr>
+    		<th style="width:40%">d.close()关闭</th>
+            <th>案例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>无参数关闭默认窗口：d.close()</td>
+            <td>
+                <a onclick="d.box('标题','dbox',false);setTimeout(function(){d.close()},5000)">d.close()</a>
+            </td>
+        </tr>
+        <tr>
+            <td>关闭指定ID窗口：d.close(id)</td>
+            <td>
+                <a onclick="d.box('标题','dbox',false,'dbox_id');setTimeout(function(){d.close('dbox_id')},5000)">d.close('dbox_id')</a>
+            </td>
+        </tr>  
+    </tbody>
+</table>
+
+<div id="dbox" style=" display:none;"><div style="border:solid 1px red; height:400px; width:100%;">我是内容
+
+<a onclick="d.close()" id="dclose1">关闭默认</a>
+<a onclick="d.close('dbox_id')" id="dclose2">关闭指定ID</a>
+</div></div>
+</body>
+</html>

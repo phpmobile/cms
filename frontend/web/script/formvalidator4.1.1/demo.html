@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/admin.css"/>
+<title>基本信息-资料修改</title>
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/comm.js"></script>
+<script type="text/javascript" src="../../script/admin.js"></script>
+<!--[if IE ]><script type="text/javascript" src="../../script/hack_ie.js"></script><![endif]-->
+<!--[if IE 6]><script type="text/javascript" src="../../script/hack_ie6.js"></script><![endif]-->
+<script type="text/javascript" src="../../script/artDialog4.1.7/jquery.artDialog.js?skin=168"></script>
+<script type="text/javascript" src="../../script/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../script/formvalidator4.1.1/js.js"></script>
+<script type="text/javascript">
+	$(function(){
+		v.init("form");
+		v.text("title","bt");
+		v.text("jgmc","jgmc");
+		v.text("kcmc","kcmc");
+		v.text("dbyx","dbyx");
+		v.text("jc","jc");
+		v.text("lxr","lxr");
+		v.text("dz","dz");
+		v.text("xm","xm");
+		v.text("nc","nc");
+		v.text("hwbsc","hwbsc");
+		v.text("kksj","kksj");
+		v.text("jdyx","jdyx");
+		v.text("jdzy","jdzy");
+		v.text("time","time");
+		v.text("xcmc","xcmc");
+		v.text("xcms","xcms");
+		v.text("ly","ly");
+		v.text("zw","zw");
+		v.text("szqy","szqy");
+		v.text("zhw","zhw");
+		v.reg("idcard","IDcard");
+		v.reg("tel_area","tel_area");
+		v.reg("tel_number","tel_number");
+		v.reg("mobile","mobile");
+		v.reg("qq","qq");
+		//v.reg("email","email");
+		v.reg("Skype","Skype");
+		v.reg("yyzz","yyzz");
+		v.reg("password","pwd");
+		v.num("number","mz");
+		v.num("number_bfb","bfb");
+		v.select("country","国家");
+		v.select("province","省");
+		v.select("city","市");
+		v.select("interme","机构");
+		
+		$("#qq").click(function(){
+			//$("#email").unformValidator(true);
+			v.reg("email","qq");
+		});
+	})
+</script>
+</head>
+<body class="admin">
+<div class="box">
+  <div class="box_right" style="float:left;width:100%;">
+    <h2>验证DEMO</h2>
+    <div class="admin_box0_bd" style="width:auto; float:none;">
+      <form id="form">
+        <table class="admin_table0">
+          <tbody>
+            <tr>
+              <th>标题:</th>
+              <td><input name="" type="text" id="title"/></td>
+            </tr>
+            <tr>
+              <th>机构名称:</th>
+              <td><input name="" type="text" id="jgmc"/></td>
+            </tr>
+            <tr>
+              <th>课程名称:</th>
+              <td><input name="" type="text" id="kcmc"/></td>
+            </tr>
+            <tr>
+              <th>代表院校:</th>
+              <td><input name="" type="text" id="dbyx"/></td>
+            </tr>
+            <tr>
+              <th>简称:</th>
+              <td><input name="" type="text" id="jc"/></td>
+            </tr>
+            <tr>
+              <th>联系人:</th>
+              <td><input name="" type="text" id="lxr"/></td>
+            </tr>
+            <tr>
+              <th>地址:</th>
+              <td><input name="" type="text" id="dz"/></td>
+            </tr>
+            <tr>
+              <th>姓名:</th>
+              <td><input name="" type="text" id="xm"/></td>
+            </tr>
+            <tr>
+              <th>昵称:</th>
+              <td><input name="" type="text" id="nc"/></td>
+            </tr>
+            <tr>
+              <th>办事处名称:</th>
+              <td><input name="" type="text" id="hwbsc"/></td>
+            </tr>
+             <tr>
+              <th>开课时间:</th>
+              <td><input name="" type="text" id="kksj"/></td>
+            </tr>
+            <tr>
+              <th>就读院校:</th>
+              <td><input name="" type="text" id="jdyx"/></td>
+            </tr>
+             <tr>
+              <th>就读专业:</th>
+              <td><input name="" type="text" id="jdzy"/></td>
+            </tr>
+             <tr>
+              <th>时间:</th>
+              <td><input name="" type="text" id="time"/></td>
+            </tr>
+             <tr>
+              <th>相册名称:</th>
+              <td><input name="" type="text" id="xcmc"/></td>
+            </tr>
+             <tr>
+              <th>相册描述:</th>
+              <td><input name="" type="text" id="xcms"/></td>
+            </tr>
+             <tr>
+              <th>来源:</th>
+              <td><input name="" type="text" id="ly"/></td>
+            </tr>
+             <tr>
+              <th>正文:</th>
+              <td><input name="" type="text" id="zw"/></td>
+            </tr>
+             <tr>
+              <th>所在企业:</th>
+              <td><input name="" type="text" id="szqy"/></td>
+            </tr>
+             <tr>
+              <th>职位:</th>
+              <td><input name="" type="text" id="zhw"/></td>
+            </tr>
+            <tr>
+              <th>身份证:</th>
+              <td><input name="" type="text" id="idcard"/></td>
+            </tr>
+            <tr>
+              <th>固定电话:</th>
+              <td><input name="" type="text" id="tel_area"/>
+                -
+                <input name="" type="text" id="tel_number"/></td>
+            </tr>
+            <tr>
+              <th>移动电话:</th>
+              <td><input  name="" type="text" id="mobile"/></td>
+            </tr>
+            <tr>
+              <th>QQ：</th>
+              <td><input name="" type="text" id="qq"/></td>
+            </tr>
+            <tr>
+              <th>Email：</th>
+              <td><input name="" type="text" id="email"/></td>
+            </tr>
+            <tr>
+              <th>Skype：</th>
+              <td><input name="" type="text" id="Skype"/></td>
+            </tr>
+            <tr>
+              <th>营业执照编号：</th>
+              <td><input name="" type="text" id="yyzz"/></td>
+            </tr>
+             <tr>
+              <th>密码：</th>
+              <td><input name="" type="password" id="password"/></td>
+            </tr>
+             <tr>
+              <th>数字：</th>
+              <td><input name="" type="text" id="number"/></td>
+            </tr>
+             <tr>
+              <th>百分比：</th>
+              <td><input name="" type="text" id="number_bfb"/></td>
+            </tr>
+             <tr>
+              <th>所属机构:</th>
+              <td>
+              <select name="" id="country">
+                  <option>-- 国家 --</option>
+                </select>
+              <select name="" id="province">
+                  <option>-- 省 --</option>
+                </select>
+                <select name="" id="city">
+                  <option>-- 市 --</option>
+                </select>
+                 <select name="" id="interme">
+                  <option>-- 机构 --</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><input class="admin_btn0"  name="" type="submit" value="保存" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

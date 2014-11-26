@@ -1,0 +1,94 @@
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	background: url(images/treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li { background: url(images/treeview-default-line.gif) 0 0 no-repeat;}
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; width: 500px;}
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(images/treeview-default.gif);}  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url(images/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(images/treeview-red.gif); } 
+
+.treeview-black li { background-image: url(images/treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(images/treeview-black.gif); }  
+
+.treeview-gray li { background-image: url(images/treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(images/treeview-gray.gif); } 
+
+.treeview-famfamfam li { background-image: url(images/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(images/treeview-famfamfam.gif); } 
+
+.treeview .placeholder {
+	background: url(images/ajax-loader.gif) 0 0 no-repeat;
+	height: 16px;
+	width: 16px;
+	display: block;
+}
+
+.treeview{}
+.treeview_control{font-size: 14px;}
+.treeview_control_opt_plus{background: url(images/treeview_control_opt_plus_ico.gif) left no-repeat;padding-left: 10px;}
+.treeview_control_opt_minus{background: url(images/treeview_control_opt_minus_ico.gif) left no-repeat;padding-left: 10px;}
+.treeview_tilte{ float: left;}
+.treeview input[type='checkbox']{margin-right: 2px;vertical-align: middle;}
+.treeview_opt{ float: left; padding-left: 5px;}
+.treeview_opt a{ background: no-repeat; display: inline-block;width: 10px;height: 10px;}
+.treeview_opt .e{background: url(images/treeview_opt_edit_ico.gif);}
+.treeview_opt .a{background: url(images/treeview_opt_add_ico.gif);}
+.treeview_opt .d{background: url(images/treeview_opt_del_ico.gif);}
+.treeview_icon_folder, .treeview_icon_user{ padding: 1px 0 1px 20px;}
+.treeview_icon_folder{ background: url(images/treeview_dep_open_ico.gif) 0 0 no-repeat;}
+.treeview_icon_folder li.expandable .treeview_icon_folder{ background: url(images/treeview_dep_closed_ico.gif) 0 0 no-repeat; }
+.treeview_icon_user0,.treeview_icon_user,.treeview_icon_user1{  padding-left: 15px;height: 20px; display: block; line-height:20px;display: inline; }
+.treeview_icon_user,.treeview_icon_user1{background: url(images/treeview_user1_ico.png) 0 0 no-repeat; }
+.treeview_icon_user0{ background: url(images/treeview_user0_ico.png) 0 0 no-repeat;  padding-left: 15px; height: 20px;}
+
+
+
+/*重写原样式*/
+.treeview li.last{ 
+background-position: 0 -9985px;
+}
+
